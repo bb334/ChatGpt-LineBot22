@@ -13,7 +13,7 @@ class ChatGPT:
         self.temperature = float(os.getenv("OPENAI_TEMPERATURE", default = 0))
         self.frequency_penalty = float(os.getenv("OPENAI_FREQUENCY_PENALTY", default = 0))
         self.presence_penalty = float(os.getenv("OPENAI_PRESENCE_PENALTY", default = .6))
-        self.max_tokens = int(os.getenv("OPENAI_MIN_TOKENS", default = 590))
+        self.max_tokens = int(os.getenv("OPENAI_MAX_TOKENS", default = 4000))
 
     def get_response(self):
         response = openai.Completion.create(
